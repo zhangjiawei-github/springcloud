@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.syp.sypuser.mapper.RoleMapper">
+
+    <resultMap id="BaseResultMap" type="cn.syp.sypuser.entity.Role">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="role_name" jdbcType="VARCHAR" property="roleName" />
+        <result column="add_time" javaType="java.sql.Timestamp" property="addTime" />
+        <result column="role_encoding" jdbcType="VARCHAR" property="roleEncoding" />
+        <result column="is_delete" jdbcType="VARCHAR" property="isDelete" />
+    </resultMap>
+
+    <sql id="Base_Column_list">
+        ID,ROLE_NAME,ADD_TIME,ROLE_ENCODING,IS_DELETE
+    </sql>
+
+    <select id="selectRolesList" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from role
+        <where>
+            <if test="id != ''">
+                id = #{id}
+            </if>
+            <if test="roleName != null and roleName != ''">
+                and role_name = #{roleName}
+            </if>
+            <if test="addTime != null and addTime != ''">
+                and add_time = #{addTime}
+            </if>
+            <if test="roleEncoding != null and roleEncoding != ''">
+                and role_encoding = #{roleEncoding}
+            </if>
+            <if test="isDelete != ''">
+                and is_delete = #{isDelete}
+            </if>
+        </where>
+    </select>
+
+    <insert id="addRole" parameterType="cn.syp.sypuser.entity.Role">
+        insert into
+        role(
+            ROLE_NAME,ADD_TIME,ROLE_ENCODING,IS_DELETE
+        )
+        values(
+            #{roleName},now(),#{roleEncoding},0
+        )
+    </insert>
+
+    <update id="deleteRoleById" parameterType="cn.syp.sypuser.entity.Role">
+        update role
+        <set>
+            is_delete = 1
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <update id="editRoleInfo" parameterType="cn.syp.sypuser.entity.Role">
+        update role
+        <set>
+            <if test="roleName!=null and roleName!=''">
+                role_name = #{roleName}
+            </if>
+            <if test="addTime!=null">
+                , add_time = #{addTime}
+            </if>
+            <if test="roleEncoding!=null and roleEncoding!=''">
+                , role_encoding = #{roleEncoding}
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <!--获取用户的角色-->
+    <select id="selectUserRolesByUserId" resultMap="BaseResultMap">
+        select
+            r.id,r.role_name,r.add_time,r.role_encoding
+        from role r,user_role ur
+        <where>
+            r.id = ur.role_id
+            and
+            r.is_delete = 0
+            and
+            ur.user_id = #{userId}
+
+        </where>
+    </select>
+<!--
+    <select id="selectUserByPhone" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            phone_number = #{phone_number}
+        </where>
+    </select>
+
+    <insert id="addUser" parameterType="cn.syp.sypuser.entity.User">
+        insert into
+        user(phone_number,username,password)
+        values(#{phone_number},#{username},#{password})
+    </insert>
+
+    <select id="selectUserById" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            id = #{id}
+        </where>
+    </select>
+
+    <select id="selectUserByEmail" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            e_mail = #{e_mail}
+        </where>
+    </select>
+
+    <insert id="insertUserByEmail" parameterType="cn.syp.sypuser.entity.User">
+        insert into
+        user(id,e_mail)
+        values(#{id},#{e_mail})
+    </insert>
+
+    <update id="updateUserById" parameterType="cn.syp.sypuser.entity.User">
+        update user
+        <set>
+            password = #{password}
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <select id="selectUserList" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            <if test="id!=null and id!=''">
+                id = #{id}
+            </if>
+            <if test="username!=null and username!=''">
+                AND username = #{username}
+            </if>
+            <if test="password!=null and password!=''">
+                AND password = #{password}
+            </if>
+            <if test="realName!=null and realName!=''">
+                AND real_name = #{realName}
+            </if>
+            <if test="phoneNumber!=null and phoneNumber!=''">
+                AND phone_number = #{phoneNumber}
+            </if>
+            &lt;!&ndash; <if test="age!=null and age!='' or age==0">
+                 AND age = #{age}
+             </if>&ndash;&gt;
+            <if test="birthDate!=null and birthDate!=''">
+                AND birth_date = #{birthDate}
+            </if>
+            &lt;!&ndash;  <if test="sex!=null and sex!='' or sex==0">
+                  AND sex = #{sex}
+              </if>&ndash;&gt;
+            <if test="headImg!=null and headImg!=''">
+                AND head_img = #{headImg}
+            </if>
+            <if test="description!=null and description!=''">
+                AND description = #{description}
+            </if>
+            <if test="isDelete!=null and isDelete!='' or isDelete==0">
+                AND is_delete = #{isDelete}
+            </if>
+            &lt;!&ndash;<if test="status!=null and status!='' or status==0">
+                AND status = #{status}
+            </if>&ndash;&gt;
+            <if test="eMail!=null and eMail!=''">
+                AND e_mail = #{eMail}
+            </if>
+
+        </where>
+        order by id asc
+    </select>
+
+    <update id="deleteUserById" parameterType="cn.syp.sypuser.entity.User">
+        update user
+        <set>
+            is_delete = 1
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+
+    <update id="updateUserParamsById" parameterType="cn.syp.sypuser.entity.User">
+        update user
+        <set>
+            <if test="username!=null and username!=''">
+                username = #{username}
+            </if>
+            <if test="password!=null and password!=''">
+                , password = #{password}
+            </if>
+            <if test="realName!=null and realName!=''">
+                , real_name = #{realName}
+            </if>
+            <if test="phoneNumber!=null and phoneNumber!=''">
+                , phone_number = #{phoneNumber}
+            </if>
+            <if test="age!=null and age!=''">
+                , age = #{age}
+            </if>
+            <if test="birthDate!=null">
+                , birth_date = #{birthDate}
+            </if>
+            <if test="sex!=null and sex!=''">
+                , sex = #{sex}
+            </if>
+            <if test="headImg!=null and headImg!=''">
+                , head_img = #{headImg}
+            </if>
+            <if test="description!=null and description!=''">
+                , description = #{description}
+            </if>
+            &lt;!&ndash;<if test="isDelete!=null and isDelete!=''  ">
+                AND is_delete = #{isDelete}
+            </if>&ndash;&gt;
+            <if test="status!=null and status!=''">
+                , status = #{status}
+            </if>
+            <if test="eMail!=null and eMail!=''">
+                , e_mail = #{eMail}
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>-->
+
+
+</mapper>

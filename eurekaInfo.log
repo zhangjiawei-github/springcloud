@@ -1,0 +1,178 @@
+2020-04-14 13:54:45.629  INFO 40760 --- [main] cn.syp.sypeureka.SypEurekaApplication    : The following profiles are active: dev
+2020-04-14 13:54:46.290  WARN 40760 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-14 13:54:46.442  INFO 40760 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6efc0155-b175-3972-a8aa-c96477ad546e
+2020-04-14 13:54:46.864  INFO 40760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2020-04-14 13:54:46.891  INFO 40760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-14 13:54:46.891  INFO 40760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-14 13:54:47.103  INFO 40760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-14 13:54:47.103  INFO 40760 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1463 ms
+2020-04-14 13:54:47.171  WARN 40760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-04-14 13:54:47.171  INFO 40760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-14 13:54:47.178  INFO 40760 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@618ad2aa
+2020-04-14 13:54:49.022  INFO 40760 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-04-14 13:54:49.251  INFO 40760 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2020-04-14 13:54:49.306  INFO 40760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-04-14 13:54:49.307  INFO 40760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-04-14 13:54:49.446  INFO 40760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-04-14 13:54:49.446  INFO 40760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-04-14 13:54:49.737  WARN 40760 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2020-04-14 13:54:49.738  WARN 40760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-04-14 13:54:49.738  INFO 40760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-14 13:54:49.866  INFO 40760 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-14 13:54:51.611  INFO 40760 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-04-14 13:54:53.133  INFO 40760 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-04-14 13:54:53.186  WARN 40760 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-14 13:54:53.219  INFO 40760 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-04-14 13:54:53.283  INFO 40760 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-04-14 13:54:53.283  INFO 40760 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2020-04-14 13:54:53.337  INFO 40760 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1586843693315 with initial instances count: 0
+2020-04-14 13:54:53.391  INFO 40760 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2020-04-14 13:54:53.393  WARN 40760 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 13:54:53.410  INFO 40760 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2020-04-14 13:54:53.411  INFO 40760 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2020-04-14 13:54:53.422  INFO 40760 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-14 13:54:53.479  INFO 40760 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2020-04-14 13:54:53.481  INFO 40760 --- [Thread-35] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2020-04-14 13:54:53.482  INFO 40760 --- [Thread-35] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
+2020-04-14 13:54:53.483  INFO 40760 --- [Thread-35] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka environment value eureka.environment is not set, defaulting to test
+2020-04-14 13:54:53.493  INFO 40760 --- [Thread-35] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2020-04-14 13:54:53.494  INFO 40760 --- [Thread-35] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2020-04-14 13:54:53.494  INFO 40760 --- [Thread-35] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2020-04-14 13:54:53.494  INFO 40760 --- [Thread-35] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2020-04-14 13:54:53.494  INFO 40760 --- [Thread-35] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2020-04-14 13:54:53.500  INFO 40760 --- [Thread-35] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2020-04-14 13:54:53.521  INFO 40760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2020-04-14 13:54:53.522  INFO 40760 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8000
+2020-04-14 13:54:54.049  INFO 40760 --- [main] cn.syp.sypeureka.SypEurekaApplication    : Started SypEurekaApplication in 13.044 seconds (JVM running for 14.696)
+2020-04-14 13:54:54.900  INFO 40760 --- [RMI TCP Connection(2)-192.168.0.102] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 13:54:54.900  INFO 40760 --- [RMI TCP Connection(2)-192.168.0.102] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-14 13:54:54.907  INFO 40760 --- [RMI TCP Connection(2)-192.168.0.102] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-04-14 13:55:53.495  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 13:56:53.496  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 13:57:53.496  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 13:58:53.497  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 13:59:53.497  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:00:53.497  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:01:53.498  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:02:42.977  INFO 40760 --- [http-nio-8000-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 14:02:53.499  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:03:26.896  INFO 40760 --- [http-nio-8000-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 14:03:53.499  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:04:32.451  INFO 40760 --- [http-nio-8000-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 14:04:53.395  WARN 40760 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 14:04:53.499  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:05:53.500  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:06:53.500  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:07:53.501  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:08:53.501  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:09:53.411  INFO 40760 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 3
+2020-04-14 14:09:53.502  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:10:53.502  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:11:53.502  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:12:53.502  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:13:53.503  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:14:53.397  WARN 40760 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 14:14:53.503  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:15:53.504  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:16:53.504  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:17:53.505  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:18:53.505  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:19:06.249  INFO 40760 --- [http-nio-8000-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 14:19:53.505  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:20:43.605  INFO 40760 --- [http-nio-8000-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status DOWN (replication=false)
+2020-04-14 14:20:46.730  INFO 40760 --- [http-nio-8000-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance SYP-USER/localhost:syp-user:8001 (replication=false)
+2020-04-14 14:20:53.506  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2020-04-14 14:20:56.809  INFO 40760 --- [http-nio-8000-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 14:21:22.884  INFO 40760 --- [http-nio-8000-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status DOWN (replication=false)
+2020-04-14 14:21:25.893  INFO 40760 --- [http-nio-8000-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance SYP-USER/localhost:syp-user:8001 (replication=false)
+2020-04-14 14:21:36.664  INFO 40760 --- [http-nio-8000-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 14:21:53.506  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:22:53.507  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:23:53.508  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:24:53.399  WARN 40760 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 14:24:53.410  INFO 40760 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 3
+2020-04-14 14:24:53.508  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:25:40.724  INFO 40760 --- [http-nio-8000-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 14:25:53.508  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:26:53.508  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:27:53.509  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:28:53.509  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:29:53.509  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:30:53.510  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:31:53.511  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:32:53.511  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:33:45.872  INFO 40760 --- [http-nio-8000-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status DOWN (replication=false)
+2020-04-14 14:33:48.952  INFO 40760 --- [http-nio-8000-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance SYP-USER/localhost:syp-user:8001 (replication=false)
+2020-04-14 14:33:53.511  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:33:59.081  INFO 40760 --- [http-nio-8000-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 14:34:53.400  WARN 40760 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 14:34:53.511  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:35:53.511  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:36:53.512  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:37:53.512  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:38:53.513  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:39:53.411  INFO 40760 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 3
+2020-04-14 14:39:53.513  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:40:53.514  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:41:53.514  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:42:53.514  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:43:53.515  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2020-04-14 14:44:53.408  WARN 40760 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 14:44:53.516  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:45:53.517  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:46:53.517  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:47:53.517  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:48:53.518  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:49:53.519  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:50:53.519  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:51:53.520  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:52:53.521  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:53:53.521  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:54:53.409  WARN 40760 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 14:54:53.412  INFO 40760 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 3
+2020-04-14 14:54:53.522  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:55:53.522  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:56:53.522  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:57:53.523  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 14:58:53.524  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2020-04-14 14:59:53.524  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:00:53.525  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:01:53.525  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:02:53.526  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:03:53.526  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:04:53.410  WARN 40760 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 15:04:53.527  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:05:53.527  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:06:53.527  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:07:53.528  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:08:53.529  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:09:53.413  INFO 40760 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 3
+2020-04-14 15:09:53.530  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:10:53.530  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:11:53.530  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:12:53.531  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:13:53.531  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:14:53.412  WARN 40760 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 15:14:53.532  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:15:53.532  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:16:14.732  INFO 40760 --- [http-nio-8000-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status DOWN (replication=false)
+2020-04-14 15:16:17.772  INFO 40760 --- [http-nio-8000-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance SYP-USER/localhost:syp-user:8001 (replication=false)
+2020-04-14 15:16:27.685  INFO 40760 --- [http-nio-8000-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 15:16:53.533  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:17:41.921  INFO 40760 --- [http-nio-8000-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status DOWN (replication=false)
+2020-04-14 15:17:44.933  INFO 40760 --- [http-nio-8000-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance SYP-USER/localhost:syp-user:8001 (replication=false)
+2020-04-14 15:17:53.534  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:18:53.534  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:19:53.535  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:20:53.535  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:21:53.536  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:22:53.538  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2020-04-14 15:23:53.539  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:24:05.963  INFO 40760 --- [http-nio-8000-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SYP-USER/localhost:syp-user:8001 with status UP (replication=false)
+2020-04-14 15:24:53.413  WARN 40760 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2020-04-14 15:24:53.414  INFO 40760 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 3
+2020-04-14 15:24:53.540  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:25:53.541  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:26:53.541  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:27:53.542  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2020-04-14 15:28:53.542  INFO 40760 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms

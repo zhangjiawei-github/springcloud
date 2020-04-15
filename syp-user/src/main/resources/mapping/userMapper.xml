@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.syp.sypuser.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="cn.syp.sypuser.entity.User">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="real_name" jdbcType="VARCHAR" property="realName" />
+        <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+        <result column="age" jdbcType="INTEGER" property="age" />
+        <result column="birth_date" javaType="java.sql.Timestamp" property="birthDate" />
+        <result column="sex" jdbcType="INTEGER" property="sex" />
+        <result column="head_img" jdbcType="VARCHAR" property="headImg" />
+        <result column="description" jdbcType="VARCHAR" property="description" />
+        <result column="is_delete" jdbcType="INTEGER" property="isDelete" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="e_mail" jdbcType="VARCHAR" property="eMail" />
+
+
+    </resultMap>
+
+    <sql id="Base_Column_list">
+        ID,USERNAME,PASSWORD,REAL_NAME,PHONE_NUMBER,AGE,BIRTH_DATE,SEX,
+        HEAD_IMG,DESCRIPTION,IS_DELETE,STATUS,E_MAIL
+    </sql>
+
+    <select id="selectUserByPhoneAndPassword" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            phone_number = #{phone_number}
+            and
+            password=#{password}
+        </where>
+    </select>
+
+    <select id="selectUserByPhone" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            phone_number = #{phone_number}
+        </where>
+    </select>
+
+    <insert id="addUser" parameterType="cn.syp.sypuser.entity.User">
+        insert into
+        user(phone_number,username,password)
+        values(#{phone_number},#{username},#{password})
+    </insert>
+
+    <select id="selectUserById" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            id = #{id}
+        </where>
+    </select>
+
+    <select id="selectUserByEmail" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            e_mail = #{e_mail}
+        </where>
+    </select>
+
+    <insert id="insertUserByEmail" parameterType="cn.syp.sypuser.entity.User">
+        insert into
+        user(id,e_mail)
+        values(#{id},#{e_mail})
+    </insert>
+
+    <update id="updateUserById" parameterType="cn.syp.sypuser.entity.User">
+        update user
+        <set>
+            password = #{password}
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <select id="selectUserList" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            <if test="id!=null and id!=''">
+                id = #{id}
+            </if>
+            <if test="username!=null and username!=''">
+                AND username = #{username}
+            </if>
+            <if test="password!=null and password!=''">
+                AND password = #{password}
+            </if>
+            <if test="realName!=null and realName!=''">
+                AND real_name = #{realName}
+            </if>
+            <if test="phoneNumber!=null and phoneNumber!=''">
+                AND phone_number = #{phoneNumber}
+            </if>
+           <!-- <if test="age!=null and age!='' or age==0">
+                AND age = #{age}
+            </if>-->
+            <if test="birthDate!=null and birthDate!=''">
+                AND birth_date = #{birthDate}
+            </if>
+          <!--  <if test="sex!=null and sex!='' or sex==0">
+                AND sex = #{sex}
+            </if>-->
+            <if test="headImg!=null and headImg!=''">
+                AND head_img = #{headImg}
+            </if>
+            <if test="description!=null and description!=''">
+                AND description = #{description}
+            </if>
+            <if test="isDelete!=null and isDelete!='' or isDelete==0">
+                AND is_delete = #{isDelete}
+            </if>
+            <!--<if test="status!=null and status!='' or status==0">
+                AND status = #{status}
+            </if>-->
+            <if test="eMail!=null and eMail!=''">
+                AND e_mail = #{eMail}
+            </if>
+
+        </where>
+        order by id asc
+    </select>
+
+    <update id="deleteUserById" parameterType="cn.syp.sypuser.entity.User">
+        update user
+        <set>
+            is_delete = 1
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+
+    <update id="updateUserParamsById" parameterType="cn.syp.sypuser.entity.User">
+        update user
+        <set>
+            <if test="username!=null and username!=''">
+                username = #{username}
+            </if>
+            <if test="password!=null and password!=''">
+                , password = #{password}
+            </if>
+            <if test="realName!=null and realName!=''">
+                , real_name = #{realName}
+            </if>
+            <if test="phoneNumber!=null and phoneNumber!=''">
+                , phone_number = #{phoneNumber}
+            </if>
+            <if test="age!=null and age!=''">
+                 , age = #{age}
+            </if>
+            <if test="birthDate!=null">
+                , birth_date = #{birthDate}
+            </if>
+            <if test="sex!=null">
+                  , sex = #{sex}
+            </if>
+            <if test="headImg!=null and headImg!=''">
+                , head_img = #{headImg}
+            </if>
+            <if test="description!=null and description!=''">
+                , description = #{description}
+            </if>
+            <!--<if test="isDelete!=null and isDelete!=''  ">
+                AND is_delete = #{isDelete}
+            </if>-->
+            <if test="status!=null">
+                , status = #{status}
+            </if>
+            <if test="eMail!=null and eMail!=''">
+                , e_mail = #{eMail}
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <select id="getUserByPhone" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_list"/>
+        from user
+        <where>
+            phone_number = #{phone_number}
+        </where>
+    </select>
+
+
+</mapper>
